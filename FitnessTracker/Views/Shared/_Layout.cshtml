@@ -13,10 +13,13 @@
             <div class="navbar-brand text-white" style="font-size:30px">FitnessTracker</div>
 
             <ul class="text-white">
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                 <li><a asp-controller="Nutrition" asp-action="Summary">Nutrition Tracking</a></li>
-                <li><a asp-controller="Goal" asp-action="Summary">Goal Tracking</a></li>
+                <li><a asp-controller="Activity" asp-action="Log">Activity Logging</a></li>
+                <li><a asp-controller="Goal" asp-action="Summary">Goal Setting</a></li>
                 <li><a asp-controller="Workout" asp-action="Summary">Workout Plans</a></li>
                 <li><a asp-controller="Bodyweight" asp-action="Summary">Bodyweight Tracking</a></li>
+
             </ul>
         </div>
 
@@ -24,8 +27,8 @@
             <header>
                 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
                     <div class="container" style="margin-right:0!important;padding-left:0!important">
-                        @*<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FitnessTracker</a>*@
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                      @*   <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FitnessTracker</a>
+                     *@    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                                 aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
