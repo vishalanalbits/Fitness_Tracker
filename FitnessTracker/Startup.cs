@@ -72,8 +72,15 @@ namespace FitnessTracker
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Nutrition}/{action=Summary}/{id?}");
+                     pattern: "{controller=Home}/{action=Index}/{id?}");
+       // pattern: "{controller=Nutrition}/{action=Summary}/{id?}");
                 endpoints.MapRazorPages();
+                endpoints.MapControllerRoute(
+      name: "activity",
+      pattern: "Activity/{action=ViewActivities}/{id?}",
+      defaults: new { controller = "Activity" });
+
+
             });
         }
     }

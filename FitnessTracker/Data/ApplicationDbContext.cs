@@ -10,6 +10,8 @@ namespace FitnessTracker.Data
 {
     public class ApplicationDbContext : IdentityDbContext<FitnessUser>
     {
+
+        public DbSet<ActivityRecord> ActivityRecords { get; set; }
         public DbSet<BodyweightRecord> BodyweightRecords { get; set; }
         public DbSet<BodyweightTarget> BodyweightTargets { get; set; }
         public DbSet<Food> UserFoods { get; set; }

@@ -1,0 +1,35 @@
+﻿@* @model List<FitnessTracker.ViewModels.ActivityLogViewModel> *@
+@model List<FitnessTracker.Models.ActivityRecord>
+
+<h2>Logged Activities</h2>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Activity Type</th>
+                <th>Duration (minutes)</th>
+                <th>Distance</th>
+                <th>Intensity</th>
+                <th>Calories Burned</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var activity in Model)
+            {
+                <tr>
+                    <td>@activity.ActivityType</td>
+                    <td>@activity.DurationInMinutes</td>
+                    <td>@activity.Distance</td>
+                    <td>@activity.Intensity</td>
+                    <td>@activity.CaloriesBurned</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No activities logged yet.</p>
+}
